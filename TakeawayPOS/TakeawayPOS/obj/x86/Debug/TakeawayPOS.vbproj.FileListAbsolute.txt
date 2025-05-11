@@ -1,0 +1,16 @@
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.Resources.resources
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.vbproj.GenerateResource.Cache
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\bin\Debug\TakeawayPOS.exe.config
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\bin\Debug\TakeawayPOS.exe
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\bin\Debug\TakeawayPOS.pdb
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\bin\Debug\TakeawayPOS.xml
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\bin\Debug\Powersoft.dll
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.frmMain.resources
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.frmTakeaway.resources
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.exe
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.xml
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.pdb
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.vbprojResolveAssemblyReference.cache
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.frmBillRptViewer.resources
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.frmLogIn.resources
+C:\Users\Power\OneDrive\Documents\Visual Studio 2010\Projects\TakeawayPOS\TakeawayPOS\obj\x86\Debug\TakeawayPOS.frmControl.resources
