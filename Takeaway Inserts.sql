@@ -42,19 +42,30 @@ VALUES
 ('Ice Cream Sundae', 'Vanilla ice cream with chocolate syrup and nuts', 65.00, 6, 15, 3, 1),
 ('Rasmalai', 'Soft cheese balls in sweetened milk', 55.00, 6, 8, 2, 1);
 
--- Insert into Customer
-INSERT INTO Customer (name, phone, street, city)
+INSERT INTO Locations (name, description, delivery_fee)
 VALUES 
-('Ahmed Emad', '01012345777', '15 Al-Nasr St', 'Ismailia'),
-('Ahmed Mostafa', '01012345678', '15 Al-Nasr St', 'Cairo'),
-('Fatma Hassan', '01098765432', '22 October Rd', 'Alexandria');
+    ('Downtown', 'City center hub', 30),
+    ('Suburbia', 'Quiet residential area', 25),
+    ('Industrial Park', 'Near factories', 20),
+    ('Uptown', 'Trendy shopping district', 35),
+    ('Riverside', 'Scenic river views', 40);
+
+-- Insert into Customer
+INSERT INTO Customer (name, phone, street, location_id)
+VALUES 
+('Ahmed Emad', '01012345777', '15 Al-Nasr St', 1),
+('Ahmed Mostafa', '01012345678', '15 Al-Nasr St', 2),
+('Fatma Hassan', '01098765432', '22 October Rd', 3),
+('Hoor Mostafa', '01010345678', '15 Al-Asr St', 5),
+('Dana Hassan', '01098553332', 'total Rd', 5);
 
 -- Insert into Staff_Role
 INSERT INTO Staff_Role (name, description)
 VALUES 
 ('Manager', 'Manages the branch'),
 ('Chef', 'Prepares food'),
-('Delivery', 'Delivers orders');
+('Delivery', 'Delivers orders'),
+('Cashier', 'Manage Cash');
 
 -- Insert into Staff
 INSERT INTO Staff (name, phone, address, role_id, is_active)
@@ -64,7 +75,9 @@ VALUES
 ('Noran Ehab', '01298765432', '45 Maadi St', 2, 1),     -- Chef
 ('Salma Ehab', '01298765432', '45 Maadi St', 2, 1),     -- Chef
 ('Omar Khaled', '01055551234', '78 Heliopolis Rd', 3, 1), -- Delivery
-('Ahmed Khaled', '01055551234', '78 Heliopolis Rd', 3, 1); -- Delivery
+('Ahmed Khaled', '01055551234', '78 Heliopolis Rd', 3, 1), -- Delivery
+('Omar Khaled', '01055551234', '78 Heliopolis Rd', 4, 1), -- Cashier
+('Ahmed Khaled', '01055551234', '78 Heliopolis Rd', 4, 1); -- Cashier
 
 
 -- Insert into Payment_Method

@@ -76,11 +76,13 @@ BEGIN
     -- Recalculate the total price for the order
     UPDATE oh
     SET oh.total_price = (
-        SELECT SUM(od.subtotal)
-        FROM Order_Detail od
+        SELECT SUM(od.subtotal) 
+        FROM Order_Detail od 
         WHERE od.order_id = @order_id
-    )
+    ) + l.delivery_fee
     FROM Order_Header oh
+	join customer c on oh.customer_id = c.id
+	join Locations l on c.location_id = l.id
     WHERE oh.id = @order_id;
 END;
 

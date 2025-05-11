@@ -23,13 +23,23 @@ ADD
     stock INT DEFAULT 0,
     warning_level INT DEFAULT 3;
 
+-- Locations
+CREATE TABLE Locations (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    name VARCHAR(50) NOT NULL UNIQUE,
+    description VARCHAR(50),
+	delivery_fee INT,
+);
+
 -- Customer
 CREATE TABLE Customer (
     id INT PRIMARY KEY IDENTITY(1,1),
     name VARCHAR(100) NOT NULL,
-    phone VARCHAR(20) NOT NULL UNIQUE,
+    phone VARCHAR(20) UNIQUE,
     street VARCHAR(100),
-    city VARCHAR(50),
+    location_id INT,
+	
+    FOREIGN KEY (location_id) REFERENCES Locations(id) ON DELETE CASCADE
 );
 
 -- Staff_Role
@@ -75,6 +85,7 @@ CREATE TABLE Order_Header (
     FOREIGN KEY (payment_id) REFERENCES Payment_Method(id) ON DELETE SET Default,
     FOREIGN KEY (staff_id) REFERENCES Staff(id) ON DELETE SET Default
 );
+
 -- Order_Detail
 CREATE TABLE Order_Detail (
     id INT PRIMARY KEY IDENTITY(1,1),
@@ -83,6 +94,7 @@ CREATE TABLE Order_Detail (
     price DECIMAL(10,2) NOT NULL,
     quantity INT NOT NULL,
     subtotal AS (price * quantity) PERSISTED,
+	notes TEXT,
     FOREIGN KEY (order_id) REFERENCES Order_Header(id) ON DELETE CASCADE,
     FOREIGN KEY (meal_id) REFERENCES Meal_DETAILS(id) ON DELETE SET DEFAULT
 );

@@ -10,23 +10,26 @@ SELECT
     oh.order_type,
     oh.total_price,
     oh.status,
+	l.delivery_fee DeliveryFee,
 	p.name PaymentMethod
 
 FROM Order_Header oh
 LEFT JOIN Staff s ON oh.staff_id = s.id
 LEFT JOIN Customer c ON oh.customer_id = c.id
+LEFT JOIN Locations l ON c.location_id = l.id
 LEFT JOIN Payment_Method p ON oh.payment_id = p.id;
 
 select * from vw_Order_Summary
 
 -- View: Order Items
-CREATE VIEW vw_Order_Items AS
+ALTER VIEW vw_Order_Items AS
 SELECT 
     od.order_id,
     m.name AS MealName,
     od.price,
     od.quantity,
-    od.subtotal
+    od.subtotal,
+	od.notes
 FROM Order_Detail od
 LEFT JOIN Meal_Details m ON od.meal_id = m.id;
 select * from vw_Order_Items
@@ -49,6 +52,7 @@ SELECT
     od.price AS MealPrice,
     od.quantity,
     od.subtotal,
+	l.delivery_fee DeliveryFee,
 	p.name PaymentMethod
 
 FROM Order_Header oh
@@ -56,7 +60,8 @@ LEFT JOIN Staff s ON oh.staff_id = s.id
 LEFT JOIN Customer c ON oh.customer_id = c.id
 LEFT JOIN Order_Detail od ON oh.id = od.order_id
 LEFT JOIN Meal_Details m ON od.meal_id = m.id
-LEFT JOIN Payment_Method p ON oh.payment_id = p.id;
+LEFT JOIN Payment_Method p ON oh.payment_id = p.id
+LEFT JOIN Locations l ON c.location_id = l.id;
 select * from vw_All_Order_Details
 
 -- View: Meal Details With Category
@@ -91,4 +96,12 @@ FROM Staff s
 LEFT JOIN Staff_Role sr ON s.role_id = sr.id;
 select * from vw_Staff_List
 
+ALTER VIEW vw_customer_Location AS
+SELECT 
+	c.id cid,
+	l.name,
+	l.delivery_fee DeliveryFee
+FROM Customer c
+LEFT JOIN Locations l ON c.location_id = l.id
 
+select name, DeliveryFee from vw_customer_Location where cid = 4
