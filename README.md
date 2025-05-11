@@ -2,14 +2,21 @@
  I am currently developing a connected desktop application that integrates with this database system.
 
 
-# 🍽️ Restaurant & Takeaway Database
+# Restaurant & Takeaway Database
 
 A complete SQL-based relational database designed to manage a restaurant and takeaway system.  
 The project includes database schema, sample data, and SQL triggers for automating business logic.
+Also includes a Windows desktop POS application, built with .NET, that integrates with this database for real-time operations.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
+
+## Solution Overview
+ It connects directly to the restaurant database to manage:
+- Menu and order entry
+- Billing and payments
+- POS terminal interface for staff
 
 - **Takeaway Tables.sql**  
   Contains the table definitions for the database, including:
@@ -33,12 +40,8 @@ Contains SQL views that simplify querying common data (e.g., order summaries, cu
 
 ---
 
-## 🧰 Technologies Used
+## Technologies Used
 - SQL Server (T-SQL)
 - Relational Database Design
 - Triggers and Constraints
-
 ---
-
-## 📄 License
- Feel free to use or modify with credit.
